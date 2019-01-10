@@ -40,6 +40,10 @@ function searchTextOnGoogle() {
         plugin: process.env.PLUGIN || 'N/A'
     }
 
+    if (process.env.TUNNEL && process.env.TUNNEL !== '') {
+        capabilities.tunnelIdentifier = process.env.TUNNEL;
+    }
+
     // setup and build selenium driver object 
     const driver = new webdriver.Builder()
         .usingServer(GRID_URL)
