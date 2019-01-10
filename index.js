@@ -35,8 +35,9 @@ function searchTextOnGoogle() {
         visual: true,
         console: true,
         video: true,
-        name: 'Test 1', // name of the test
-        build: process.env.BUILD || 'NodeJS build' // name of the build
+        name: process.env.NAME || '', // name of the test
+        build: process.env.BUILD || 'Untitled', // name of the build
+        plugin: process.env.PLUGIN || 'N/A'
     }
 
     // setup and build selenium driver object 
