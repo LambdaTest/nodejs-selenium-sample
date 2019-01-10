@@ -20,37 +20,28 @@ const webdriver = require('selenium-webdriver');
     version :  Supported list of version can be found at https://www.lambdatest.com/capabilities-generator/
 */
 
-// username: Username can be found at automation dashboard
-const USERNAME = '{username}';
-
-// AccessKey:  AccessKey can be generated from automation dashboard or profile section
-const KEY = '{accessKey}';
-
 // gridUrl: gridUrl can be found at automation dashboard
-const GRID_HOST = 'beta-hub.lambdatest.com/wd/hub';
+const GRID_URL = process.env.GRID_URL;
 
 function searchTextOnGoogle() {
 
     // Setup Input capabilities
     const capabilities = {
-        platform: 'windows 10',
-        browserName: 'chrome',
-        version: '67.0',
-        resolution: '1280x800',
+        platform: process.env.PLATFORM || 'windows 10',
+        browserName: process.env.BROWSER || 'chrome',
+        version: process.env.VERSION || '67.0',
+        resolution: process.env.RESOLUTION || '1280x800',
         network: true,
         visual: true,
         console: true,
         video: true,
         name: 'Test 1', // name of the test
-        build: 'NodeJS build' // name of the build
+        build: process.env.BUILD || 'NodeJS build' // name of the build
     }
-
-    // URL: https://{username}:{accessToken}@beta-hub.lambdatest.com/wd/hub
-    const gridUrl = 'https://' + USERNAME + ':' + KEY + '@' + GRID_HOST;
 
     // setup and build selenium driver object 
     const driver = new webdriver.Builder()
-        .usingServer(gridUrl)
+        .usingServer(GRID_URL)
         .withCapabilities(capabilities)
         .build();
 
