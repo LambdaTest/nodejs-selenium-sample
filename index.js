@@ -27,7 +27,7 @@ const USERNAME = '{username}';
 const KEY = '{accessKey}';
 
 // gridUrl: gridUrl can be found at automation dashboard
-const GRID_HOST = 'beta-hub.lambdatest.com/wd/hub';
+const GRID_HOST = 'hub.lambdatest.com/wd/hub';
 
 function searchTextOnGoogle() {
 
