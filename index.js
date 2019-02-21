@@ -64,7 +64,9 @@ function searchTextOnGoogle() {
                 }, 5000);
             });
         });
+    }).catch(function(err){
+        console.log("test failed with reason "+err)
+        driver.quit();
     });
 }
-
 searchTextOnGoogle();
