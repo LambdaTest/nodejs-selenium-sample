@@ -60,12 +60,14 @@ function searchTextOnGoogle() {
             driver.getTitle().then(function(title) {
                 setTimeout(function() {
                     console.log(title);
+                    driver.executeScript('lambda-status=passed');
                     driver.quit();
                 }, 5000);
             });
         });
     }).catch(function(err){
         console.log("test failed with reason "+err)
+        driver.executeScript('lambda-status=failed');
         driver.quit();
     });
 }
