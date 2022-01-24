@@ -14,7 +14,7 @@ sudo apt install npm
 2. Install NodeJS.
 
 ```
-sudo apt install nodejs.
+sudo apt install nodejs
 ```
 
 ## Steps to Run your First Test
@@ -25,7 +25,7 @@ Step 1. Clone the NodeJs Selenium Repository.
 git clone https://github.com/4msha/nodejs-selenium-sample.git
 ```
 
-Step 2. Export the Lambda-test Credentials. You can get these from your automation dashboard. T
+Step 2. Export the Lambda-test Credentials. You can get these from your automation dashboard.
 
 <p align="center">
    <b>For Linux/macOS:</b>:
@@ -63,7 +63,7 @@ You can check your test results on the [Automation Dashboard](https://automation
 
 ## Understanding the Test.
 
-1. Importing Selenium Wedriver,setting up username, ccess-key, and grid-host.
+1. Importing Selenium Wedriver,setting up username, access-key, and grid-host.
 
 ```
 const webdriver = require('selenium-webdriver');
