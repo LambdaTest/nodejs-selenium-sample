@@ -21,13 +21,14 @@ const webdriver = require('selenium-webdriver');
 */
 
 // username: Username can be found at automation dashboard
-const USERNAME = '{username}';
+const USERNAME = process.env.LT_USERNAME;
 
 // AccessKey:  AccessKey can be generated from automation dashboard or profile section
-const KEY = '{accessKey}';
+const KEY = process.env.LT_ACCESS_KEY;
 
 // gridUrl: gridUrl can be found at automation dashboard
 const GRID_HOST = 'hub.lambdatest.com/wd/hub';
+
 
 function searchTextOnGoogle() {
 
@@ -37,6 +38,7 @@ function searchTextOnGoogle() {
         browserName: 'chrome',
         version: '67.0',
         resolution: '1280x800',
+        geoLocation : "US",
         network: true,
         visual: true,
         console: true,
@@ -63,10 +65,18 @@ function searchTextOnGoogle() {
                     driver.executeScript('lambda-status=passed');
                     driver.quit();
                 }, 5000);
+            }).catch(function(err){
+                console.log("Cannot find title."+err)
+                driver.executeScript('lambda-status=failed');
+                driver.quit();
             });
+        }).catch(function(err){
+            console.log("Cannot find element."+err)
+            driver.executeScript('lambda-status=failed');
+            driver.quit();
         });
     }).catch(function(err){
-        console.log("test failed with reason "+err)
+        console.log("Test failed with reason "+err)
         driver.executeScript('lambda-status=failed');
         driver.quit();
     });

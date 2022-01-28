@@ -1,0 +1,22 @@
+{
+  "name": "nodejs-selenium-sample",
+  "version": "1.0.0",
+  "description": "![LambdaTest Logo](https://www.lambdatest.com/images/logo.svg)",
+  "main": "index.js",
+  "scripts": {
+    "test": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/4msha/nodejs-selenium-sample.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/4msha/nodejs-selenium-sample/issues"
+  },
+  "homepage": "https://github.com/4msha/nodejs-selenium-sample#readme",
+  "dependencies": {
+    "selenium-webdriver": "^4.1.1"
+  }
+}
