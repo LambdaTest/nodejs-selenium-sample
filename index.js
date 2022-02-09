@@ -56,29 +56,25 @@ function searchTextOnGoogle() {
         .withCapabilities(capabilities)
         .build();
 
-    // navigate to a url, search for a text and get title of page
-    driver.get('https://www.google.com/ncr').then(function() {
-        driver.findElement(webdriver.By.name('q')).sendKeys('LambdaTest\n').then(function() {
-            driver.getTitle().then(function(title) {
-                setTimeout(function() {
-                    console.log(title);
-                    driver.executeScript('lambda-status=passed');
-                    driver.quit();
-                }, 5000);
-            }).catch(function(err){
-                console.log("Cannot find title."+err)
-                driver.executeScript('lambda-status=failed');
-                driver.quit();
-            });
-        }).catch(function(err){
-            console.log("Cannot find element."+err)
-            driver.executeScript('lambda-status=failed');
-            driver.quit();
+    // navigate to a url, click on the first and second list items and add a new one in the list.
+    driver.get('https://lambdatest.github.io/sample-todo-app/').then(function() {
+        driver.findElement(webdriver.By.name('li1')).click().then(function(){
+           console.log("Successfully clicked first list item.");
         });
+        driver.findElement(webdriver.By.name('li2')).click().then(function(){
+            console.log("Successfully clicked second list item.");
+         });
+
+         driver.findElement(webdriver.By.id('sampletodotext')).sendKeys('Complete Lambdatest Tutorial\n').then(function(){
+             driver.findElement(webdriver.By.id('addbutton')).click().then(function(){
+                 console.log("Successfully added a new task.");
+             })
+         });
+
     }).catch(function(err){
-        console.log("Test failed with reason "+err)
+        console.log("test failed with reason "+err)
         driver.executeScript('lambda-status=failed');
         driver.quit();
     });
-}
+    
 searchTextOnGoogle();
