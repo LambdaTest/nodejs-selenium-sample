@@ -1,3 +1,4 @@
+
 /*
     LambdaTest selenium automation sample example
     Configuration
@@ -27,54 +28,57 @@ const USERNAME = process.env.LT_USERNAME;
 const KEY = process.env.LT_ACCESS_KEY;
 
 // gridUrl: gridUrl can be found at automation dashboard
-const GRID_HOST = 'hub.lambdatest.com/wd/hub';
+const GRID_HOST = 'https://hub.lambdatest.com/wd/hub';
 
+// Setup Input capabilities
+var capabilities = {
+    'LT:Options': {
+        "user": USERNAME,
+        "accessKey": KEY,
+        "build": "your build name",
+        "name": "your test name",
+        "platformName": "Windows 10",
+        "selenium_version": "4.1.2",
+        "seCdp": "true"
+    },
+    "browserName": "Chrome",
+    "browserVersion": "latest",
+};
 
-function searchTextOnGoogle() {
+(async () => {
+    try {
+        // setup and build selenium driver object 
+        let driver = new webdriver.Builder()
+            .forBrowser("chrome")
+            .usingServer(GRID_HOST)
+            .withCapabilities(capabilities)
+            .build();
 
-    // Setup Input capabilities
-    const capabilities = {
-        platform: 'windows 10',
-        browserName: 'chrome',
-        version: '67.0',
-        resolution: '1280x800',
-        geoLocation : "US",
-        network: true,
-        visual: true,
-        console: true,
-        video: true,
-        name: 'Test 1', // name of the test
-        build: 'NodeJS build' // name of the build
-    }
+        // navigate to a url, click on the first and second list items and add a new one in the list.
+        await driver.get('https://lambdatest.github.io/sample-todo-app/');
+        driver.findElement(webdriver.By.name('li1')).click()
+        console.log("Successfully clicked first list item.");
 
-    // URL: https://{username}:{accessToken}@beta-hub.lambdatest.com/wd/hub
-    const gridUrl = 'https://' + USERNAME + ':' + KEY + '@' + GRID_HOST;
-
-    // setup and build selenium driver object 
-    const driver = new webdriver.Builder()
-        .usingServer(gridUrl)
-        .withCapabilities(capabilities)
-        .build();
-
-    // navigate to a url, click on the first and second list items and add a new one in the list.
-    driver.get('https://lambdatest.github.io/sample-todo-app/').then(function() {
-        driver.findElement(webdriver.By.name('li1')).click().then(function(){
-           console.log("Successfully clicked first list item.");
+        const cdpConnection = await driver.createCDPConnection('page');
+        await driver.onLogEvent(cdpConnection, function (event) {
+            console.log(event['args'][0]['value']);
         });
-        driver.findElement(webdriver.By.name('li2')).click().then(function(){
-            console.log("Successfully clicked second list item.");
-         });
+        await driver.executeScript('console.log("here")');
 
-         driver.findElement(webdriver.By.id('sampletodotext')).sendKeys('Complete Lambdatest Tutorial\n').then(function(){
-             driver.findElement(webdriver.By.id('addbutton')).click().then(function(){
-                 console.log("Successfully added a new task.");
-             })
-         });
+        await driver.findElement(webdriver.By.name('li2')).click();
+        console.log("Successfully clicked second list item.");
 
-    }).catch(function(err){
-        console.log("test failed with reason "+err)
-        driver.executeScript('lambda-status=failed');
-        driver.quit();
-    });
-    
-searchTextOnGoogle();
+        await driver.findElement(webdriver.By.id('sampletodotext')).sendKeys('Complete Lambdatest Tutorial\n');
+        await driver.findElement(webdriver.By.id('addbutton')).click();
+
+        console.log("Successfully added a new task.");
+
+        await driver.executeScript('lambda-status=passed');
+        await driver.quit();
+    } catch (e) {
+        console.log("test failed with reason " + e)
+        await driver.executeScript('lambda-status=failed');
+        await driver.quit();
+    }
+})()
+
