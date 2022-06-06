@@ -5,15 +5,15 @@
 </p>
 
 <p align="center">
-  <a href="https://www.lambdatest.com/blog/?" target="_bank">Blog</a>
+  <a href="https://www.lambdatest.com/blog/??utm_source=github&utm_medium=repo&utm_campaign=nodejs-selenium-sample" target="_bank">Blog</a>
   &nbsp; &#8901; &nbsp;
-  <a href="https://www.lambdatest.com/support/docs/" target="_bank">Docs</a>
+  <a href="https://www.lambdatest.com/support/docs/?utm_source=github&utm_medium=repo&utm_campaign=nodejs-selenium-sample" target="_bank">Docs</a>
   &nbsp; &#8901; &nbsp;
-  <a href="https://www.lambdatest.com/learning-hub/" target="_bank">Learning Hub</a>
+  <a href="https://www.lambdatest.com/learning-hub/?utm_source=github&utm_medium=repo&utm_campaign=nodejs-selenium-sample" target="_bank">Learning Hub</a>
   &nbsp; &#8901; &nbsp;
-  <a href="https://www.lambdatest.com/newsletter/" target="_bank">Newsletter</a>
+  <a href="https://www.lambdatest.com/newsletter/?utm_source=github&utm_medium=repo&utm_campaign=nodejs-selenium-sample" target="_bank">Newsletter</a>
   &nbsp; &#8901; &nbsp;
-  <a href="https://www.lambdatest.com/certifications/" target="_bank">Certifications</a>
+  <a href="https://www.lambdatest.com/certifications/?utm_source=github&utm_medium=repo&utm_campaign=nodejs-selenium-sample" target="_bank">Certifications</a>
   &nbsp; &#8901; &nbsp;
   <a href="https://www.youtube.com/c/LambdaTest" target="_bank">YouTube</a>
 </p>
@@ -209,9 +209,9 @@ Check out our latest tutorials on JavaScript automation testing 👇
       
 Visit the following links to learn more about LambdaTest's features, setup and tutorials around test automation, mobile app testing, responsive testing, and manual testing.
 
-* [LambdaTest Documentation](https://www.lambdatest.com/support/docs/?utm_source=github&utm_medium=repo&utm_campaign=Java-TestNG-Selenium)
-* [LambdaTest Blog](https://www.lambdatest.com/blog/?utm_source=github&utm_medium=repo&utm_campaign=Java-TestNG-Selenium)
-* [LambdaTest Learning Hub](https://www.lambdatest.com/learning-hub/?utm_source=github&utm_medium=repo&utm_campaign=Java-TestNG-Selenium)    
+* [LambdaTest Documentation](https://www.lambdatest.com/support/docs/?utm_source=github&utm_medium=repo&utm_campaign=nodejs-selenium-sample)
+* [LambdaTest Blog](https://www.lambdatest.com/blog/?utm_source=github&utm_medium=repo&utm_campaign=nodejs-selenium-sample)
+* [LambdaTest Learning Hub](https://www.lambdatest.com/learning-hub/?utm_source=github&utm_medium=repo&utm_campaign=nodejs-selenium-sample)    
 
 ## LambdaTest Community :busts_in_silhouette:
 
@@ -223,7 +223,7 @@ To stay updated with the latest features and product add-ons, visit [Changelog](
       
 ## About LambdaTest
 
-[LambdaTest](https://www.lambdatest.com/) is a leading test execution and orchestration platform that is fast, reliable, scalable, and secure. It allows users to run both manual and automated testing of web and mobile apps across 3000+ different browsers, operating systems, and real device combinations. Using LambdaTest, businesses can ensure quicker developer feedback and hence achieve faster go to market. Over 500 enterprises and 1 Million + users across 130+ countries rely on LambdaTest for their testing needs.    
+[LambdaTest](https://www.lambdatest.com/?utm_source=github&utm_medium=repo&utm_campaign=nodejs-selenium-sample) is a leading test execution and orchestration platform that is fast, reliable, scalable, and secure. It allows users to run both manual and automated testing of web and mobile apps across 3000+ different browsers, operating systems, and real device combinations. Using LambdaTest, businesses can ensure quicker developer feedback and hence achieve faster go to market. Over 500 enterprises and 1 Million + users across 130+ countries rely on LambdaTest for their testing needs.    
 
 ### Features
 
@@ -245,4 +245,4 @@ To stay updated with the latest features and product add-ons, visit [Changelog](
 ## We are here to help you :headphones:
 
 * Got a query? we are available 24x7 to help. [Contact Us](support@lambdatest.com)
-* For more info, visit - [LambdaTest](https://www.lambdatest.com/)
+* For more info, visit - [LambdaTest](https://www.lambdatest.com/?utm_source=github&utm_medium=repo&utm_campaign=nodejs-selenium-sample)
