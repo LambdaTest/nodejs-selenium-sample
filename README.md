@@ -5,7 +5,7 @@
 </p>
 
 <p align="center">
-  <a href="https://www.lambdatest.com/blog/??utm_source=github&utm_medium=repo&utm_campaign=nodejs-selenium-sample" target="_bank">Blog</a>
+  <a href="https://www.lambdatest.com/blog/?utm_source=github&utm_medium=repo&utm_campaign=nodejs-selenium-sample" target="_bank">Blog</a>
   &nbsp; &#8901; &nbsp;
   <a href="https://www.lambdatest.com/support/docs/?utm_source=github&utm_medium=repo&utm_campaign=nodejs-selenium-sample" target="_bank">Docs</a>
   &nbsp; &#8901; &nbsp;
@@ -21,7 +21,7 @@
 &emsp;
 &emsp;
 
-*Learn how to use Node.js environment to configure and run your JavaScript automation testing scripts on the [LambdaTest Selenium cloud platform](https://www.lambdatest.com/selenium-automation).*
+*Learn how to use Node.js environment to configure and run your JavaScript automation testing scripts on the [LambdaTest Selenium cloud platform](https://www.lambdatest.com/selenium-automation/?utm_source=github&utm_medium=repo&utm_campaign=nodejs-selenium-sample).*
 
 [<img height="58" width="200" src="https://user-images.githubusercontent.com/70570645/171866795-52c11b49-0728-4229-b073-4b704209ddde.png">](https://accounts.lambdatest.com/register)
 
@@ -66,7 +66,7 @@ const webdriver = require('selenium-webdriver');
 
 ### Setting up Your Authentication
 
-Make sure you have your LambdaTest credentials with you to run test automation scripts on LambdaTest Selenium Grid. You can obtain these credentials from the [LambdaTest Automation Dashboard](https://automation.lambdatest.com/build) or through [LambdaTest Profile](https://accounts.lambdatest.com/login).
+Make sure you have your LambdaTest credentials with you to run test automation scripts on LambdaTest Selenium Grid. You can obtain these credentials from the [LambdaTest Automation Dashboard](https://automation.lambdatest.com/build/?utm_source=github&utm_medium=repo&utm_campaign=nodejs-selenium-sample) or through [LambdaTest Profile](https://accounts.lambdatest.com/login/?utm_source=github&utm_medium=repo&utm_campaign=nodejs-selenium-sample).
 
 Set LambdaTest `Username` and `Access Key` in environment variables.
 
@@ -112,7 +112,7 @@ const capabilities = {
         video: true             // Enable to capture the video recording of the test
 }
 ```
-> **Note:** You can generate capabilities for your test requirements with the help of our inbuilt **[Capabilities Generator tool](https://www.lambdatest.com/capabilities-generator/)**.
+> **Note:** You can generate capabilities for your test requirements with the help of our inbuilt **[Capabilities Generator tool](https://www.lambdatest.com/capabilities-generator/?utm_source=github&utm_medium=repo&utm_campaign=nodejs-selenium-sample)**.
 
 ### Writing your Test Cases
 
@@ -147,11 +147,11 @@ Please execute the following command below to run your tests:
 ```bash
 npm test OR node index.js
 ```
-Your test results would be displayed on the test console (or command-line interface if you are using terminal/cmd) and on [LambdaTest automation dashboard](https://automation.lambdatest.com/build). LambdaTest Automation Dashboard will help you view all your text logs, screenshots and video recording for your entire automation tests.
+Your test results would be displayed on the test console (or command-line interface if you are using terminal/cmd) and on [LambdaTest automation dashboard](https://automation.lambdatest.com/build/?utm_source=github&utm_medium=repo&utm_campaign=nodejs-selenium-sample). LambdaTest Automation Dashboard will help you view all your text logs, screenshots and video recording for your entire automation tests.
 
 ## Testing Locally Hosted or Privately Hosted Projects
 
-You can test your locally hosted or privately hosted projects with [LambdaTest Selenium grid cloud](https://www.lambdatest.com/selenium-automation) using LambdaTest Tunnel app. All you would have to do is set up an SSH tunnel using LambdaTest Tunnel app and pass toggle `tunnel = True` via desired capabilities. LambdaTest Tunnel establishes a secure SSH protocol based tunnel that allows you in testing your locally hosted or privately hosted pages, even before they are made live.
+You can test your locally hosted or privately hosted projects with [LambdaTest Selenium grid cloud](https://www.lambdatest.com/selenium-automation/?utm_source=github&utm_medium=repo&utm_campaign=nodejs-selenium-sample) using LambdaTest Tunnel app. All you would have to do is set up an SSH tunnel using LambdaTest Tunnel app and pass toggle `tunnel = True` via desired capabilities. LambdaTest Tunnel establishes a secure SSH protocol based tunnel that allows you in testing your locally hosted or privately hosted pages, even before they are made live.
 
 >Refer our [LambdaTest Tunnel documentation](https://www.lambdatest.com/support/docs/testing-locally-hosted-pages/) for more information.
 
@@ -191,19 +191,19 @@ const capabilities = {
 
 Check out our latest tutorials on JavaScript automation testing 👇
 
-* [How To Perform Modern Web Testing With TestCafe Using JavaScript And Selenium](https://www.lambdatest.com/blog/modern-web-testing-with-testcafe/)
-* [How To Implement Drag And Drop In JavaScript Using Selenium?](https://www.lambdatest.com/blog/how-to-implement-drag-and-drop-in-javascript/#:~:text=Launch%20the%20browser.,Close%20the%20browser.)
-* [Automation Testing with Selenium JavaScript [Tutorial]](https://www.lambdatest.com/blog/automation-testing-with-selenium-javascript/)
-* [Best 9 JavaScript Testing Frameworks](https://www.lambdatest.com/blog/top-javascript-automation-testing-framework/)
-* [Jest vs Mocha vs Jasmine: Comparing The Top 3 JavaScript Testing Frameworks](https://www.lambdatest.com/blog/jest-vs-mocha-vs-jasmine/)
-* [How To Use JavaScript Wait Function In Selenium WebDriver](https://www.lambdatest.com/blog/javascript-wait-in-selenium-webdriver/#SeleniumWebDriver)
-* [Jest Tutorial For Selenium JavaScript Testing With Examples](https://www.lambdatest.com/blog/jest-tutorial-for-selenium-javascript-testing-with-examples/)
-* [Cucumber.js Tutorial with Examples For Selenium JavaScript](https://www.lambdatest.com/blog/cucumberjs-tutorial-selenium/)
-* [Mocha JavaScript Tutorial With Examples For Selenium Testing](https://www.lambdatest.com/blog/mocha-javascript-tutorial-with-examples-for-selenium-testing/)
-* [How To Get Data Of Attributes In JavaScript With Selenium](https://www.lambdatest.com/blog/how-to-get-data-of-attributes-in-javascript-with-selenium/)
-* [How To Take Screenshots In Selenium WebDriver Using JavaScript](https://www.lambdatest.com/blog/taking-screenshots-in-selenium-webdriver-using-javascript/)
-* [How To Use Strings In JavaScript With Selenium WebDriver](https://www.lambdatest.com/blog/using-strings-in-javascript-using-selenium-webdriver/)
-* [How To Use JavaScript Wait Function In Selenium WebDriver](https://www.lambdatest.com/blog/javascript-wait-in-selenium-webdriver/)
+* [How To Perform Modern Web Testing With TestCafe Using JavaScript And Selenium](https://www.lambdatest.com/blog/modern-web-testing-with-testcafe/?utm_source=github&utm_medium=repo&utm_campaign=nodejs-selenium-sample)
+* [How To Implement Drag And Drop In JavaScript Using Selenium?](https://www.lambdatest.com/blog/how-to-implement-drag-and-drop-in-javascript/#:~:text=Launch%20the%20browser.,Close%20the%20browser./?utm_source=github&utm_medium=repo&utm_campaign=nodejs-selenium-sample)
+* [Automation Testing with Selenium JavaScript [Tutorial]](https://www.lambdatest.com/blog/automation-testing-with-selenium-javascript/?utm_source=github&utm_medium=repo&utm_campaign=nodejs-selenium-sample)
+* [Best 9 JavaScript Testing Frameworks](https://www.lambdatest.com/blog/top-javascript-automation-testing-framework/?utm_source=github&utm_medium=repo&utm_campaign=nodejs-selenium-sample)
+* [Jest vs Mocha vs Jasmine: Comparing The Top 3 JavaScript Testing Frameworks](https://www.lambdatest.com/blog/jest-vs-mocha-vs-jasmine/?utm_source=github&utm_medium=repo&utm_campaign=nodejs-selenium-sample)
+* [How To Use JavaScript Wait Function In Selenium WebDriver](https://www.lambdatest.com/blog/javascript-wait-in-selenium-webdriver/#SeleniumWebDriver/?utm_source=github&utm_medium=repo&utm_campaign=nodejs-selenium-sample)
+* [Jest Tutorial For Selenium JavaScript Testing With Examples](https://www.lambdatest.com/blog/jest-tutorial-for-selenium-javascript-testing-with-examples/?utm_source=github&utm_medium=repo&utm_campaign=nodejs-selenium-sample)
+* [Cucumber.js Tutorial with Examples For Selenium JavaScript](https://www.lambdatest.com/blog/cucumberjs-tutorial-selenium/?utm_source=github&utm_medium=repo&utm_campaign=nodejs-selenium-sample)
+* [Mocha JavaScript Tutorial With Examples For Selenium Testing](https://www.lambdatest.com/blog/mocha-javascript-tutorial-with-examples-for-selenium-testing/?utm_source=github&utm_medium=repo&utm_campaign=nodejs-selenium-sample)
+* [How To Get Data Of Attributes In JavaScript With Selenium](https://www.lambdatest.com/blog/how-to-get-data-of-attributes-in-javascript-with-selenium/?utm_source=github&utm_medium=repo&utm_campaign=nodejs-selenium-sample)
+* [How To Take Screenshots In Selenium WebDriver Using JavaScript](https://www.lambdatest.com/blog/taking-screenshots-in-selenium-webdriver-using-javascript/?utm_source=github&utm_medium=repo&utm_campaign=nodejs-selenium-sample)
+* [How To Use Strings In JavaScript With Selenium WebDriver](https://www.lambdatest.com/blog/using-strings-in-javascript-using-selenium-webdriver/?utm_source=github&utm_medium=repo&utm_campaign=nodejs-selenium-sample)
+* [How To Use JavaScript Wait Function In Selenium WebDriver](https://www.lambdatest.com/blog/javascript-wait-in-selenium-webdriver/?utm_source=github&utm_medium=repo&utm_campaign=nodejs-selenium-sample)
 
 ## Documentation & Resources :books:
       
@@ -215,7 +215,7 @@ Visit the following links to learn more about LambdaTest's features, setup and t
 
 ## LambdaTest Community :busts_in_silhouette:
 
-The [LambdaTest Community](https://community.lambdatest.com/) allows people to interact with tech enthusiasts. Connect, ask questions, and learn from tech-savvy people. Discuss best practises in web development, testing, and DevOps with professionals from across the globe 🌎
+The [LambdaTest Community](https://community.lambdatest.com/?utm_source=github&utm_medium=repo&utm_campaign=nodejs-selenium-sample) allows people to interact with tech enthusiasts. Connect, ask questions, and learn from tech-savvy people. Discuss best practises in web development, testing, and DevOps with professionals from across the globe 🌎
 
 ## What's New At LambdaTest ❓
 
@@ -244,5 +244,5 @@ To stay updated with the latest features and product add-ons, visit [Changelog](
       
 ## We are here to help you :headphones:
 
-* Got a query? we are available 24x7 to help. [Contact Us](support@lambdatest.com)
+* Got a query? we are available 24x7 to help. [Contact Us](support@lambdatest.com/?utm_source=github&utm_medium=repo&utm_campaign=nodejs-selenium-sample)
 * For more info, visit - [LambdaTest](https://www.lambdatest.com/?utm_source=github&utm_medium=repo&utm_campaign=nodejs-selenium-sample)
