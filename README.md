@@ -36,7 +36,7 @@
 
 Before getting started with Selenium automation testing on LambdaTest, you need to:
 
-* Download and install **NodeJS**. You should be having **NodeJS v6** or newer. Click [here](https://nodejs.org/en/) to download.
+* Download and install **NodeJS**. You should be having **NodeJS v6 to NodeJS v16**. Click [here](https://nodejs.org/en/) to download.
 * Make sure you are using the latest version of **JavaScript**.
 * Install **npm** from the official website by clicking [here](https://www.npmjs.com/).
 * Download [Selenium JavaScript bindings](https://www.selenium.dev/downloads/) from the official website. Latest versions of **Selenium Client** and **WebDriver** are ideal for running your JavaScript automation testing script on LambdaTest’s Selenium Grid.
