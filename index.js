@@ -35,7 +35,7 @@ async function searchTextOnGoogle() {
             "w3c": true,
             "plugin": "node_js-node_js"
         }
-    }
+    };
 
     // URL: https://{username}:{accessToken}@beta-hub.lambdatest.com/wd/hub
     const gridUrl = 'https://' + USERNAME + ':' + KEY + '@' + GRID_HOST;
