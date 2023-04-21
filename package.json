@@ -17,6 +17,6 @@
   },
   "homepage": "https://github.com/4msha/nodejs-selenium-sample#readme",
   "dependencies": {
-    "selenium-webdriver": "^4.1.1"
+    "selenium-webdriver": "^4.9.0"
   }
 }
