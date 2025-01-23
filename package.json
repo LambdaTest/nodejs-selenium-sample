@@ -1,6 +1,6 @@
 {
   "name": "nodejs-selenium-sample",
-  "version": "2.0.0",
+  "version": "1.0.1",
   "description": "![LambdaTest Logo](https://www.lambdatest.com/images/logo.svg)",
   "main": "index.js",
   "scripts": {
