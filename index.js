@@ -3,42 +3,43 @@
     Configuration
     ----------
     username: Username can be found at automation dashboard
-    accessToken:  AccessToken can be generated from automation dashboard or profile section
+    accessKey:  AccessKey can be generated from automation dashboard or profile section
 
     Result
     -------
-    Execute NodeJS Automation Tests on LambdaTest Distributed Selenium Grid 
+    Execute NodeJS Automation Tests on LambdaTest Cloud Grid 
 */
 
 const webdriver = require('selenium-webdriver');
 
 // username: Username can be found at automation dashboard
-const USERNAME = process.env.LT_USERNAME;
+const username = process.env.LT_USERNAME;
 
 // AccessKey:  AccessKey can be generated from automation dashboard or profile section
-const KEY = process.env.LT_ACCESS_KEY;
+const accessKey = process.env.LT_ACCESS_KEY;
 
-// gridUrl: gridUrl can be found at automation dashboard
-const GRID_HOST = 'hub.lambdatest.com/wd/hub';
-
-async function searchTextOnGoogle() {
-    // Setup Input capabilities
-
+async function todoTest() {
+    // Setup Input capabilities, Know more about LamdbdaTest Capabilities: https://www.lambdatest.com/capabilities-generator/
     const capabilities = {
         "browserName": "Chrome",
-        "browserVersion": "latest",
+        // "browserVersion": "latest", #Uncomment to Specify Browser Version 
         "LT:Options": {
-            // "platformName": "Windows 10",
-            name: 'Test 1', // name of the test
-            build: 'NodeJS build', // name of the build
-            "project": "Untitled",
+            name: 'NodeJS Get Set Go', // name of the test
+            build: 'NodeJS Loves LambdaTest', // name of the build
+            "project": "Build-With-LambdaTtest",
             "w3c": true,
-            "plugin": "node_js-node_js"
-        }
-    };
+            "plugin": "NodeJS",
+            "customData": {
+                "buildNumber": "1234",
+                "environment": "Staging",
+                "apiVersion": "v1.2.3",
+                "releaseTag": "v1.2.3-rc1"
+            },
 
-    // URL: https://{username}:{accessToken}@beta-hub.lambdatest.com/wd/hub
-    const gridUrl = 'https://' + USERNAME + ':' + KEY + '@' + GRID_HOST;
+        }
+    }
+
+    const gridUrl = 'https://' + username + ':' + accessKey + '@hub.lambdatest.com/wd/hub';
 
     // Setup and build selenium driver object
     const driver = new webdriver.Builder()
@@ -57,6 +58,7 @@ async function searchTextOnGoogle() {
         await driver.findElement(webdriver.By.id('sampletodotext')).sendKeys('Complete Lambdatest Tutorial\n');
         await driver.findElement(webdriver.By.id('addbutton')).click();
         console.log("Successfully added a new task.");
+        await driver.executeScript('lambda-status=passed');
     } catch (err) {
         console.log("test failed with reason " + err);
         await driver.executeScript('lambda-status=failed');
@@ -65,4 +67,4 @@ async function searchTextOnGoogle() {
     }
 }
 
-searchTextOnGoogle();
+todoTest();

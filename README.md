@@ -85,9 +85,20 @@ Now you can add the `GRID HOST` which is used to connect your current test suite
 
 ```js
 // index.js
-const GRID_HOST = 'hub.lambdatest.com/wd/hub';
-const gridUrl = 'https://' + USERNAME + ':' + KEY + '@' + GRID_HOST;
-const driver = new webdriver.Builder().usingServer(gridUrl).withCapabilities(capabilities).build();
+// username: Username can be found at automation dashboard
+const username = process.env.LT_USERNAME;
+
+// AccessKey:  AccessKey can be generated from automation dashboard or profile section
+const accessKey = process.env.LT_ACCESS_KEY;
+
+const gridUrl = 'https://' + username + ':' + accessKey + '@hub.lambdatest.com/wd/hub';
+
+    // Setup and build selenium driver object
+    const driver = new webdriver.Builder()
+        .usingServer(gridUrl)
+        .withCapabilities(capabilities)
+        .build();
+
 ```
 The above grid connect will create the `Webdriver` for the test suite to execute the `Selenium` commands for your test. 
 
@@ -99,18 +110,24 @@ In the test script, you need to update your test capabilities. In this code, we 
 
 ```js
 // index.js
-const capabilities = {
-        build: 'NodeJS build',  // Name of the build
-        name: 'Test 1',         // Name of the test
-        platform: 'windows 10', // Name of Operating System
-        browserName: 'chrome',  // Name of the browser
-        version: '67.0',        // Version of the browser
-        resolution: '1280x800', // Resolution of the screen 
-        network: true,          // Enable to capture browser network logs
-        visual: true,           // Enable to capture screenshot on every command
-        console: true,          // Enable to capture the console log
-        video: true             // Enable to capture the video recording of the test
-}
+// Setup capabilities, Know more about LamdbdaTest Capabilities: https://www.lambdatest.com/capabilities-generator/
+    const capabilities = {
+        "browserName": "Chrome",
+        // "browserVersion": "latest", #Uncomment to Specify Browser Version 
+        "LT:Options": {
+            name: 'NodeJS Get Set Go', // name of the test
+            build: 'NodeJS Loves LambdaTest', // name of the build
+            "project": "Build-With-LambdaTtest",
+            "w3c": true,
+            "plugin": "NodeJS",
+            "customData": {
+                "buildNumber": "1234",
+                "environment": "Staging",
+                "apiVersion": "v1.2.3",
+                "releaseTag": "v1.2.3-rc1"
+            },
+
+        }
 ```
 > **Note:** You can generate capabilities for your test requirements with the help of our inbuilt **[Capabilities Generator tool](https://www.lambdatest.com/capabilities-generator/?utm_source=github&utm_medium=repo&utm_campaign=nodejs-selenium-sample)**.
 
@@ -119,25 +136,28 @@ const capabilities = {
 Now you write your selenium test cases in your `index.js` file:
 
 ```js
-function searchTextOnGoogle() {
-    // navigate to a url, search for a text and get title of page
-    driver.get('https://www.google.com/ncr').then(function () {
-        driver.findElement(webdriver.By.name('q')).sendKeys('LambdaTest\n').then(function () {
-            driver.getTitle().then(function (title) {
-                setTimeout(function () {
-                    console.log(title);
-                    driver.executeScript('lambda-status=passed');
-                    driver.quit();
-                }, 5000);
-            });
-        });
-    }).catch(function (err) {
-        console.log("test failed with reason " + err)
-        driver.executeScript('lambda-status=failed');
-        driver.quit();
-    });
+async function todoTest() {
+   try {
+        // Navigate to a URL, click on the first and second list items and add a new one in the list.
+        await driver.get('https://lambdatest.github.io/sample-todo-app/');
+        await driver.findElement(webdriver.By.name('li1')).click();
+        console.log("Successfully clicked first list item.");
+        await driver.findElement(webdriver.By.name('li2')).click();
+        console.log("Successfully clicked second list item.");
+
+        await driver.findElement(webdriver.By.id('sampletodotext')).sendKeys('Complete Lambdatest Tutorial\n');
+        await driver.findElement(webdriver.By.id('addbutton')).click();
+        console.log("Successfully added a new task.");
+        await driver.executeScript('lambda-status=passed');
+    } catch (err) {
+        console.log("test failed with reason " + err);
+        await driver.executeScript('lambda-status=failed');
+    } finally {
+        await driver.quit();
+    }
 }
-searchTextOnGoogle();
+
+todoTest();
 ```
 
 ## Executing the Test

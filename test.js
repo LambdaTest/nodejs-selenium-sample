@@ -6,23 +6,29 @@ const USERNAME = process.env.LT_USERNAME;
 const KEY = process.env.LT_ACCESS_KEY;
 const GRID_HOST = 'hub.lambdatest.com/wd/hub';
 
-async function searchTextOnGoogle() {
-  // Setup Input capabilities
+async function pdfWebTest() {
+  // Setup Input capabilities, Know more about LamdbdaTest Capabilities: https://www.lambdatest.com/capabilities-generator/
   const capabilities = {
-    "browserName": "Safari",
-    // "browserVersion": "latest",
+    "browserName": "Chrome",
+    // "browserVersion": "latest", #Uncomment to Specify Browser Version 
     "LT:Options": {
-        // "platformName": "Windows 10",
-        name: 'Test 1', // name of the test
-        build: 'NodeJS build', // name of the build
-        "project": "Untitled",
-        "w3c": true,
-        "plugin": "node_js-node_js"
+      name: 'NodeJS Get Set Go', // name of the test
+      build: 'NodeJS Loves LambdaTest', // name of the build
+      "project": "Build-With-LambdaTtest",
+      "w3c": true,
+      "plugin": "NodeJS",
+      "customData": 
+        {
+          _id: "5f46aaa69adf77cfe2bb4fd6",
+          index: "0",
+          guid: "9451b204-12f0-4177-8fe9-fb019b3e4bf3",
+          isActive: "False",
+          picture: "http://placehold.it/32x32",
+        },
+      
     }
-};
+  };
 
-
-  // URL: https://{username}:{accessToken}@beta-hub.lambdatest.com/wd/hub
   const gridUrl = 'https://' + USERNAME + ':' + KEY + '@' + GRID_HOST;
 
   // Setup and build selenium driver object
@@ -42,7 +48,7 @@ async function searchTextOnGoogle() {
       await elements[0].click();
       console.log("Successfully clicked first list item.");
     }
-
+    driver.executeScript('lambda-status=passed');
 
     // Close the browser
     await driver.quit();
@@ -53,4 +59,4 @@ async function searchTextOnGoogle() {
   }
 }
 
-searchTextOnGoogle();
+pdfWebTest();
