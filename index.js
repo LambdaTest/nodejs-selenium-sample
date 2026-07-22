@@ -49,7 +49,7 @@ async function todoTest() {
 
     try {
         // Navigate to a URL, click on the first and second list items and add a new one in the list.
-        await driver.get('https://lambdatest.github.io/sample-todo-app/');
+        await driver.get('https://www.testmuai.com/selenium-playground/todo-app/');
         await driver.findElement(webdriver.By.name('li1')).click();
         console.log("Successfully clicked first list item.");
         await driver.findElement(webdriver.By.name('li2')).click();
